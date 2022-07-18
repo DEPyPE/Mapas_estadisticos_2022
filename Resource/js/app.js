@@ -1274,7 +1274,7 @@
     }
 
     $(function(){
-        $('.collection .collection-item')[13].click();
+        $('.collection .collection-item')[0].click();
     });
     
     $('.collection .collection-item').on('click', function(){
