@@ -62,10 +62,10 @@
             t4:   0.57, t41:  10.24
         },
         "ReprobacionMS":  {
-            t1:   1.85,  t11:  12.75,
-            t2:   12.76, t21:  23.66,
-            t3:   23.67, t31:  34.57,
-            t4:   34.58, t41:  45.45
+            t1:   1.85,  t11:  4.59,
+            t2:   4.60, t21:  11.14,
+            t3:   11.15, t31:  18.75,
+            t4:   18.76, t41:  45.45
         },
         "AbandonoPrimaria":  {
             t1: -2.95,  t11:  -1.05,
@@ -80,10 +80,10 @@
             t4: 6.55, t41: 8.71 
         },
         "AbandonoMS":  {
-            t1: -1.12,  t11:  10.21,
-            t2: 10.22, t21:  21.54,
-            t3: 21.55, t31:  32.88,
-            t4: 32.89, t41: 44.19 
+            t1: -1.12,  t11:  5.21,
+            t2:  5.22, t21:  10.54,
+            t3: 10.55, t31:  13.88,
+            t4: 13.89, t41: 44.19 
         },
         "AbandonoSuperior":  {
             t1: -18.92, t11:  -1.05,
@@ -377,22 +377,27 @@
         console.log( 'Min => ', MinOfSet(Data_vector)  );
         console.log( 'Max => ', MaxOfSet(Data_vector)  );
 
+        var t1 =  20.83, t11 =  90.00;
+        var t2 =  90.01, t12 = 100.00;
+        var t3 = 100.01, t13 = 300.00;
+        var t4 = 300.01, t14 = 636.30;
+
         for(var i=0; i<DataGuanajuatoStates.length; i++){
             var Map_data = DataGuanajuatoStates[i].AbsorcionMS;
 
-            if ( Map_data >= 20.83 && Map_data <= 60.40 )
+            if ( Map_data >= t1 && Map_data <= t11 )
                 s1_range.push( DataGuanajuatoStates[i].id );
-            else if ( Map_data >= 60.41 && Map_data <= 79.97 )
+            else if ( Map_data >= t2  && Map_data <= t12 )
                 s2_range.push( DataGuanajuatoStates[i].id );
-            else if ( Map_data >= 79.98 && Map_data < 129.69 )
+            else if ( Map_data >= t3 && Map_data < t13 )
                 s3_range.push( DataGuanajuatoStates[i].id );
-            else if ( Map_data >= 129.70 && Map_data <= 636.30 )
+            else if ( Map_data >= t4 && Map_data <= t14 )
                 s4_range.push( DataGuanajuatoStates[i].id );
         }
 
         /* 1er color */
         var s1 = chart.series.push(new am4maps.MapPolygonSeries());
-        s1.name = "20.83% - 60.40%";
+        s1.name = t1 + "% - " + t11 + "%";
         s1.useGeodata = true;
         s1.include = s1_range;
         s1.mapPolygons.template.fill = am4core.color( ColorPalette.Green[0].Range1 );
@@ -403,7 +408,7 @@
 
         /* 2do color */
         var s2 = chart.series.push(new am4maps.MapPolygonSeries());
-        s2.name = "60.41% - 79.97%";
+        s2.name = t2 + "% - " + t12 + "%";
         s2.useGeodata = true;
         s2.include = s2_range;
         s2.mapPolygons.template.fill = am4core.color( ColorPalette.Green[0].Range2 );
@@ -414,7 +419,7 @@
 
         /* 3er color */
         var s3 = chart.series.push(new am4maps.MapPolygonSeries());
-        s3.name = "79.98% 129.69%";
+        s3.name = t3 + "% - " + t13 + "%";
         s3.useGeodata = true;
         s3.include = s3_range;
         s3.mapPolygons.template.fill = am4core.color( ColorPalette.Green[0].Range3 );
@@ -425,7 +430,7 @@
 
         /* 4to color */
         var s4 = chart.series.push(new am4maps.MapPolygonSeries());
-        s4.name = "129.70% - 636.30%";
+        s4.name = t4 + "% - " + t14 + "%";
         s4.useGeodata = true;
         s4.include = s4_range;
         s4.mapPolygons.template.fill = am4core.color( ColorPalette.Green[0].Range4 );
@@ -456,9 +461,9 @@
         console.log( 'Min => ', MinOfSet(Data_vector)  );
         console.log( 'Max => ', MaxOfSet(Data_vector)  );
 
-        var th1 = 0.37, th12 = 38.26;
-        var th2 = 38.27, th22 = 76.14;
-        var th3 = 76.15, th32 = 114.02;
+        var th1 =   0.37, th12 =  65.14;
+        var th2 =  65.15, th22 =  80.00;
+        var th3 =  80.01, th32 = 114.02;
         var th4 = 114.03, th42 = 151.90;
 
         for(var i=0; i<DataGuanajuatoStates.length; i++){
@@ -476,6 +481,8 @@
                 s5_range.push( DataGuanajuatoStates[i].id )
         }
 
+        var LineColor = "rgba(10, 10, 10, 0.3)";
+
         /* 1er color */
         var s1 = chart.series.push(new am4maps.MapPolygonSeries());
         s1.name = th1 + "% -" + th12 + "%";
@@ -485,7 +492,7 @@
         s1.fill = am4core.color( ColorPalette.Green[0].Range1 );
 
         var pts1 = s1.mapPolygons.template;
-        pts1.stroke = am4core.color("rgba(100, 100, 100, 0.3)");
+        pts1.stroke = am4core.color( LineColor );
 
         /* 2do color */
         var s2 = chart.series.push(new am4maps.MapPolygonSeries());
@@ -496,7 +503,7 @@
         s2.fill = am4core.color( ColorPalette.Green[0].Range2 );
 
         var pts2 = s2.mapPolygons.template;
-        pts2.stroke = am4core.color("rgba(100, 100, 100, 0.3)");
+        pts2.stroke = am4core.color( LineColor );
 
         /* 3er color */
         var s3 = chart.series.push(new am4maps.MapPolygonSeries());
@@ -507,7 +514,7 @@
         s3.fill = am4core.color( ColorPalette.Green[0].Range3 );
 
         var pts3 = s3.mapPolygons.template;
-        pts3.stroke = am4core.color("rgba(100, 100, 100, 0.3)");
+        pts3.stroke = am4core.color( LineColor );
 
         /* 4to color */
         var s4 = chart.series.push(new am4maps.MapPolygonSeries());
@@ -518,7 +525,7 @@
         s4.fill = am4core.color( ColorPalette.Green[0].Range4 );
 
         var pts4 = s4.mapPolygons.template;
-        pts4.stroke = am4core.color("rgba(100, 100, 100, 0.3)");
+        pts4.stroke = am4core.color( LineColor );
 
         chart.legend = new am4maps.Legend();
         chart.legend.position = "right";
@@ -999,6 +1006,8 @@
                 s5_range.push( DataGuanajuatoStates[i].id )
         }
 
+        var LineColor = "rgba(210, 210, 210, 0.3)";
+
         /* 1er color */
         var s1 = chart.series.push(new am4maps.MapPolygonSeries());
         s1.name = th1 + "% - " + th12 + "%";
@@ -1008,7 +1017,7 @@
         s1.fill = am4core.color( ColorPalette.Brown[0].Range1 );
 
         var pts1 = s1.mapPolygons.template;
-        pts1.stroke = am4core.color("rgba(10, 10, 10, 0.3)");
+        pts1.stroke = am4core.color( LineColor );
 
         /* 2do color */
         var s2 = chart.series.push(new am4maps.MapPolygonSeries());
@@ -1019,7 +1028,7 @@
         s2.fill = am4core.color( ColorPalette.Brown[0].Range2 );
 
         var pts2 = s2.mapPolygons.template;
-        pts2.stroke = am4core.color("rgba(10, 10, 10, 0.3)");
+        pts2.stroke = am4core.color( LineColor );
 
         /* 3er color */
         var s3 = chart.series.push(new am4maps.MapPolygonSeries());
@@ -1030,7 +1039,7 @@
         s3.fill = am4core.color( ColorPalette.Brown[0].Range3 );
 
         var pts3 = s3.mapPolygons.template;
-        pts3.stroke = am4core.color("rgba(10, 10, 10, 0.3)");
+        pts3.stroke = am4core.color( LineColor );
 
         /* 4to color */
         var s4 = chart.series.push(new am4maps.MapPolygonSeries());
@@ -1041,7 +1050,7 @@
         s4.fill = am4core.color( ColorPalette.Brown[0].Range4 );
 
         var pts4 = s4.mapPolygons.template;
-        pts4.stroke = am4core.color("rgba(10, 10, 10, 0.3)");
+        pts4.stroke = am4core.color( LineColor );
 
         chart.legend = new am4maps.Legend();
         chart.legend.position = "right";
@@ -1077,6 +1086,8 @@
                 s5_range.push( DataGuanajuatoStates[i].id )
         }
 
+        var LineColor = "rgba(210, 210, 210, 0.6)";
+
         /* 1er color */
         var s1 = chart.series.push(new am4maps.MapPolygonSeries());
         s1.name = th1 + "% - " + th12 + "%";
@@ -1086,7 +1097,7 @@
         s1.fill = am4core.color( ColorPalette.Teal[0].Range1 );
 
         var pts1 = s1.mapPolygons.template;
-        pts1.stroke = am4core.color("rgba(10, 10, 10, 0.3)");
+        pts1.stroke = am4core.color( LineColor );
 
         /* 2do color */
         var s2 = chart.series.push(new am4maps.MapPolygonSeries());
@@ -1097,7 +1108,7 @@
         s2.fill = am4core.color( ColorPalette.Teal[0].Range2 );
 
         var pts2 = s2.mapPolygons.template;
-        pts2.stroke = am4core.color("rgba(10, 10, 10, 0.3)");
+        pts2.stroke = am4core.color( LineColor );
 
         /* 3er color */
         var s3 = chart.series.push(new am4maps.MapPolygonSeries());
@@ -1108,7 +1119,7 @@
         s3.fill = am4core.color( ColorPalette.Teal[0].Range3 );
 
         var pts3 = s3.mapPolygons.template;
-        pts3.stroke = am4core.color("rgba(10, 10, 10, 0.3)");
+        pts3.stroke = am4core.color( LineColor );
 
         /* 4to color */
         var s4 = chart.series.push(new am4maps.MapPolygonSeries());
@@ -1119,7 +1130,7 @@
         s4.fill = am4core.color( ColorPalette.Teal[0].Range4 );
 
         var pts4 = s4.mapPolygons.template;
-        pts4.stroke = am4core.color("rgba(10, 10, 10, 0.3)");
+        pts4.stroke = am4core.color( LineColor );
 
         if( DataIndex == "AbandonoSuperior" ){
             /* 5to color */
@@ -1263,7 +1274,7 @@
     }
 
     $(function(){
-        $('.collection .collection-item')[9].click();
+        $('.collection .collection-item')[13].click();
     });
     
     $('.collection .collection-item').on('click', function(){
@@ -1466,24 +1477,9 @@
                 $('.notas-datos').css('color', 'white');
 
                 // Asignación de colores para los nombres de los municipios
-                $('.nombre-municipios').children().removeClass('white-text').addClass('black-text');
+                $('.nombre-municipios').children().removeClass('black-text').addClass('white-text');
                 $('.label-PurisimaDelRincon').removeClass('white-text').addClass('black-text');
-
-                $('.label-Silao').removeClass('black-text').addClass('white-text');
-                $('.label-Guanajuato').removeClass('black-text').addClass('white-text');
-                $('.label-Leon').removeClass('black-text').addClass('white-text');
-                $('.label-SanFelipe').removeClass('black-text').addClass('white-text');
-                $('.label-SanDiegoDeLaUnion').removeClass('black-text').addClass('white-text');
-                $('.label-Victoria').removeClass('black-text').addClass('white-text');
-                $('.label-Xichu').removeClass('black-text').addClass('white-text');
-                $('.label-SantaCatarina').removeClass('black-text').addClass('white-text');
-                $('.label-SanJoseIturbide').removeClass('black-text').addClass('white-text');
-                $('.label-Salamanca').removeClass('black-text').addClass('white-text');
-                $('.label-SantaCruzDeJuventinoRosas').removeClass('black-text').addClass('white-text');
-                $('.label-Cortazar').removeClass('black-text').addClass('white-text');
-                $('.label-SantiagoMaravatio').removeClass('black-text').addClass('white-text');
-                $('.label-ManuelDoblado').removeClass('black-text').addClass('white-text');
-
+                $('.label-Tarandacuao').removeClass('white-text').addClass('black-text');
             break;
             case "10":
                 Mapa_Abandono('AbandonoPrimaria');
@@ -1536,13 +1532,10 @@
                 $('.notas-datos').css('color', 'white');
 
                 // Asignación de colores para los nombres de los municipios
-                $('.nombre-municipios').children().removeClass('white-text').addClass('black-text');
+                $('.nombre-municipios').children().removeClass('black-text').addClass('white-text');
 
                 $('.label-PurisimaDelRincon').removeClass('white-text').addClass('black-text'); 
-
-                $('.label-ManuelDoblado').removeClass('black-text').addClass('white-text'); 
-                $('.label-SanFelipe').removeClass('black-text').addClass('white-text'); 
-                $('.label-SantiagoMaravatio').removeClass('black-text').addClass('white-text'); 
+                $('.label-ApaseoElAlto').removeClass('white-text').addClass('black-text'); 
             break;
             case "13":
                 Mapa_Abandono('AbandonoSuperior');
