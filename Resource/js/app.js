@@ -557,10 +557,10 @@
         console.log( 'Min => ', MinOfSet(Data_vector)  );
         console.log( 'Max => ', MaxOfSet(Data_vector)  );
 
-        var th1 = 91.34, th12 = 95.44;
-        var th2 = 95.45, th22 = 99.54;
-        var th3 = 99.55, th32 = 103.65;
-        var th4 = 103.66, th42 = 107.73;
+        var th1 = 91.34, th12 = 100.00;
+        var th2 = 100.01, th22 = 102.58;
+        var th3 = 102.59, th32 = 105.15;
+        var th4 = 105.16, th42 = 107.73;
 
         for(var i=0; i<DataGuanajuatoStates.length; i++){
             var Map_data = DataGuanajuatoStates[i].ET_Primaria;
@@ -643,10 +643,10 @@
         console.log( 'Min => ', MinOfSet(Data_vector)  );
         console.log( 'Max => ', MaxOfSet(Data_vector)  );
 
-        var th1 = 81.33, th12 = 86.00;
-        var th2 = 86.01, th22 = 90.68;
-        var th3 = 90.69, th32 = 95.35;
-        var th4 = 95.36, th42 = 100.00;
+        var th1 = 81.33, th12 = 93.34;
+        var th2 = 93.35, th22 = 95.57;
+        var th3 = 95.58, th32 = 97.79;
+        var th4 = 97.80, th42 = 100.00;
 
         for(var i=0; i<DataGuanajuatoStates.length; i++){
             var Map_data = DataGuanajuatoStates[i].ET_Secundaria;
@@ -1263,7 +1263,7 @@
     }
 
     $(function(){
-        $('.collection .collection-item')[19].click();
+        $('.collection .collection-item')[6].click();
     });
     
     $('.collection .collection-item').on('click', function(){
@@ -1340,17 +1340,6 @@
 
                 // Asignación de colores para los nombres de los municipios
                 $('.nombre-municipios').children().addClass('black-text');
-
-                $('.label-Guanajuato').removeClass('black-text').addClass('white-text');
-                $('.label-Victoria').removeClass('black-text').addClass('white-text');
-                $('.label-Xichu').removeClass('black-text').addClass('white-text');
-                $('.label-SantaCatarina').removeClass('black-text').addClass('white-text');
-                $('.label-DoctorMora').removeClass('black-text').addClass('white-text');
-                $('.label-SanJoseIturbide').removeClass('black-text').addClass('white-text');
-                $('.label-ApaseoElGrande').removeClass('black-text').addClass('white-text');
-                $('.label-Villagran').removeClass('black-text').addClass('white-text');
-                $('.label-PuebloNuevo').removeClass('black-text').addClass('white-text');
-                $('.label-Penjamo').removeClass('black-text').addClass('white-text');
                 $('.label-Tarandacuao').removeClass('black-text').addClass('white-text');
             break;
             case "5":
