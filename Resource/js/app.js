@@ -56,10 +56,10 @@
             t4:   0.29, t41:  0.48
         },
         "ReprobacionSecundaria":  {
-            t1:   0.00, t11:  0.56,
-            t2:   0.57, t21:  2.13,
-            t3:   2.14, t31:  5.70,
-            t4:   5.71, t41:  10.24
+            t1:   0.00, t11:  0.19,
+            t2:   0.20, t21:  0.39,
+            t3:   0.40, t31:  0.56,
+            t4:   0.57, t41:  10.24
         },
         "ReprobacionMS":  {
             t1:   1.85,  t11:  12.75,
@@ -1263,7 +1263,7 @@
     }
 
     $(function(){
-        $('.collection .collection-item')[6].click();
+        $('.collection .collection-item')[9].click();
     });
     
     $('.collection .collection-item').on('click', function(){
@@ -1437,6 +1437,26 @@
                 $('.label-TierraBlanca').removeClass('black-text').addClass('white-text');
                 $('.label-Ocampo').removeClass('black-text').addClass('white-text');
                 $('.label-SanFrancisco').removeClass('black-text').addClass('white-text');
+                $('.label-SanFelipe').removeClass('black-text').addClass('white-text');
+                $('.label-SanLuisDeLaPaz').removeClass('black-text').addClass('white-text');
+                $('.label-DoctorMora').removeClass('black-text').addClass('white-text');
+                $('.label-SanJoseIturbide').removeClass('black-text').addClass('white-text');
+                $('.label-SanMiguel').removeClass('black-text').addClass('white-text');
+                $('.label-Leon').removeClass('black-text').addClass('white-text');
+                $('.label-Guanajuato').removeClass('black-text').addClass('white-text');
+                $('.label-ManuelDoblado').removeClass('black-text').addClass('white-text');
+                $('.label-Cuaramaro').removeClass('black-text').addClass('white-text');
+                $('.label-Penjamo').removeClass('black-text').addClass('white-text');
+                $('.label-Huanimar').removeClass('black-text').addClass('white-text');
+                $('.label-Yuriria').removeClass('black-text').addClass('white-text');
+                $('.label-Moroleon').removeClass('black-text').addClass('white-text');
+                $('.label-SantaCruzDeJuventinoRosas').removeClass('black-text').addClass('white-text');
+                $('.label-Celaya').removeClass('black-text').addClass('white-text');
+                $('.label-Tarimoro').removeClass('black-text').addClass('white-text');
+                $('.label-Jerecuaro').removeClass('black-text').addClass('white-text');
+                $('.label-Acambaro').removeClass('black-text').addClass('white-text');
+                $('.label-Tarandacuao').removeClass('black-text').addClass('white-text');
+                $('.label-Cueramaro').removeClass('black-text').addClass('white-text'); 
             break;
             case "9":
                 Mapa_Reprobacion('ReprobacionMS');
