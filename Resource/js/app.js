@@ -1274,7 +1274,7 @@
     }
 
     $(function(){
-        $('.collection .collection-item')[0].click();
+        $('.collection .collection-item')[6].click();
     });
     
     $('.collection .collection-item').on('click', function(){
@@ -1364,35 +1364,10 @@
                 // Asignación de colores para los nombres de los municipios
                 $('.nombre-municipios').children().addClass('black-text');
 
-                $('.label-Guanajuato').removeClass('black-text').addClass('white-text');
                 $('.label-Victoria').removeClass('black-text').addClass('white-text');
-                $('.label-Xichu').removeClass('black-text').addClass('white-text');
                 $('.label-SantaCatarina').removeClass('black-text').addClass('white-text');
-                $('.label-DoctorMora').removeClass('black-text').addClass('white-text');
-                $('.label-SanJoseIturbide').removeClass('black-text').addClass('white-text');
-                $('.label-ApaseoElGrande').removeClass('black-text').addClass('white-text');
-                $('.label-Villagran').removeClass('black-text').addClass('white-text');
-                $('.label-PuebloNuevo').removeClass('black-text').addClass('white-text');
-                $('.label-Tarandacuao').removeClass('black-text').addClass('white-text');
-                $('.label-Silao').removeClass('black-text').addClass('white-text');
-                $('.label-Irapuato').removeClass('black-text').addClass('white-text');
-                $('.label-Salamanca').removeClass('black-text').addClass('white-text');
-                $('.label-ValleDeSantiago').removeClass('black-text').addClass('white-text');
-                $('.label-SantaCruzDeJuventinoRosas').removeClass('black-text').addClass('white-text');
-                $('.label-SanLuisDeLaPaz').removeClass('black-text').addClass('white-text');
                 $('.label-Atarjea').removeClass('black-text').addClass('white-text');
-                $('.label-TierraBlanca').removeClass('black-text').addClass('white-text');
-                $('.label-Celaya').removeClass('black-text').addClass('white-text');
-                $('.label-ApaseoElAlto').removeClass('black-text').addClass('white-text');
-                $('.label-Coroneo').removeClass('black-text').addClass('white-text');
-                $('.label-Cortazar').removeClass('black-text').addClass('white-text');
-                $('.label-Tarimoro').removeClass('black-text').addClass('white-text');
-                $('.label-Salvatierra').removeClass('black-text').addClass('white-text');
-                $('.label-SantiagoMaravatio').removeClass('black-text').addClass('white-text');
-                $('.label-Uriangato').removeClass('black-text').addClass('white-text');
-                $('.label-Moroleon').removeClass('black-text').addClass('white-text');
-                $('.label-JaralDelProgreso').removeClass('black-text').addClass('white-text');
-                $('.label-Huanimaro').removeClass('black-text').addClass('white-text');
+                
             break;
             case "6":
                 Mapa_EficienciaTerminalMS();
