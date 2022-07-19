@@ -1350,7 +1350,7 @@
                 $('.notas-datos').css('color', 'white');
 
                 // Asignación de colores para los nombres de los municipios
-                $('.nombre-municipios').children().addClass('black-text');
+                $('.nombre-municipios').children().removeClass('white-text').addClass('black-text');
                 $('.label-Tarandacuao').removeClass('black-text').addClass('white-text');
             break;
             case "5":
